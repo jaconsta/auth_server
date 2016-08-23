@@ -11,8 +11,6 @@ import (
 )
 
 
-// http://www.alexedwards.net/blog/organising-database-access
-// Using Request-scoped context
 func main() {
 	/**
 	Database access
