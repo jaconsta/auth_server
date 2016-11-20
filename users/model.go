@@ -10,6 +10,7 @@ var tableName = "users"
 /**
 	Configuration
  */
+// Create the users table
 func New () (error){
 	err := utils.CreateTable(tableName)
 	return err
@@ -19,6 +20,7 @@ func New () (error){
 	CRUD METHODS
  */
 
+// Store an user
 func createUser(user User) (*User, error){
 
 	res, err := r.DB(utils.Database).Table(tableName).Insert(user).RunWrite(utils.DbSession)
@@ -33,6 +35,7 @@ func createUser(user User) (*User, error){
 	return nil, nil
 }
 
+// Get the user from it's email
 func getUser(serEmail string) (*User, error) {
 	return nil, nil
 }
